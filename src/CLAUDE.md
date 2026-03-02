@@ -23,7 +23,7 @@ public/           Static assets (images, fonts, generated files like llms.txt)
 
 ## Required Features
 
-Every docs site using this template must implement these six features.
+Every docs site using this template must implement these seven features.
 
 ### 1. PrevNextNav Component
 
@@ -70,7 +70,17 @@ A script at `scripts/build-llms-txt.ts` that generates two files in `public/`:
 
 Runs as a prebuild script in `package.json` so the files are always fresh at deploy time. Uses `production_url` from `.docs-config.json` for absolute URLs, but relative URLs are good too.
 
-### 6. Search Index Generation
+### 6. README.md
+
+Every docs project must include a `README.md` in the repo root that explains how to run the docs locally. At minimum it should cover:
+
+- Prerequisites (Node.js version, package manager)
+- Install steps (`pnpm install` or equivalent)
+- Dev server command (`pnpm dev` or equivalent) and the local URL
+- Build command (`pnpm build`) and how to preview the production build
+- Any environment variables or config needed to get started
+
+### 7. Search Index Generation
 
 A script at `scripts/build-search-index.ts` that builds a client-side search index from the MDX content.
 
