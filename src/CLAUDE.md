@@ -36,13 +36,14 @@ A component that renders previous/next navigation links at the bottom of every d
 
 ### 2. PageActions Dropdown
 
-A dropdown at the top of every docs page with three actions:
+A dropdown at the top of every docs page with four actions:
 
-- **Copy as Markdown** — copies the raw MDX content of the current page to the clipboard
+- **Copy page** — copies the raw MDX content of the current page to the clipboard as Markdown for LLMs
+- **View as Markdown** — opens the page's raw Markdown content as plain text in a new tab
+- **Open in ChatGPT** — opens a new tab with a URL like `https://chatgpt.com/?q=` encoding a prompt asking ChatGPT to read the page, using the page's production URL from `.docs-config.json`
 - **Open in Claude** — opens a new tab with a URL like:
   `https://claude.ai/new?q=Read%20this%20documentation%20page%20and%20help%20me%20understand%20it%3A%0A%0Ahttps%3A%2F%2Fdocs.cyfrin.io%2Fupdraft%2Fwhat-is-a-cyfrin-updraft-professional-certification`
   The URL encodes a prompt asking Claude to read the page, using the page's production URL from `.docs-config.json`.
-- **Open in ChatGPT** — opens a new tab with a similar URL format using `https://chatgpt.com/?q=` and the same encoded prompt pattern
 
 ### 3. Edit This Page Button
 
